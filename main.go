@@ -31,7 +31,6 @@ func init() {
 }
 
 func main() {
-
 	defer func() {
 		fmt.Println("begin defer")
 		err := consumer.Close()
@@ -63,7 +62,7 @@ func main() {
 				if err != nil {
 					log.Printf("FAILED to send message: %s\n", err)
 				} else {
-					log.Printf("> message sent to partition %d at offset %d\n", partition, offset)
+					log.Printf("message sent to partition %d at offset %d\n", partition, offset)
 				}
 			}
 		})
